@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// raw data of our Stub compiled stub
+// raw data of our compiled stub
 unsigned char rawData[2462687] = { 0x4D, 0x5A, 0x90, ...};
 
 
