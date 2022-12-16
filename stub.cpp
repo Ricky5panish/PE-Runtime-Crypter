@@ -30,7 +30,7 @@ int main() {
 
 
     // decrypt the resource raw data
-    char key = '6741865291';
+    char key = 'k';
     char decrypted[dwSize];
     for (int i = 0; i < dwSize; i++)
         decrypted[i] = resourcePtr[i] ^ key;
