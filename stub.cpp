@@ -1,5 +1,4 @@
 #include <iostream>
-#include <minwindef.h>
 #include <windows.h>
 
 unsigned char *GetResource(int resourceId, char* resourceString, unsigned long* dwSize) {
