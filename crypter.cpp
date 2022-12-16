@@ -73,7 +73,7 @@ int main(int argc, char* argv[]) {
 
     // XOR encrypt the resource data
     cout << "Encrypting data... ";
-    char key = '6741865291';    // same key as in the compiled Stub
+    char key = 'k';    // same key as in the compiled Stub
     char encrypted[filelen];
     for (int i = 0; i < filelen; i++)
         encrypted[i] = fileBuff[i] ^ key;
