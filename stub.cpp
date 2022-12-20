@@ -44,9 +44,6 @@ int main() {
 
     PROCESS_INFORMATION PI;
     STARTUPINFOA SI;
-    ZeroMemory(&PI, sizeof(PI));
-    ZeroMemory(&SI, sizeof(SI));
-
 
     void* pImageBase;
 
@@ -57,6 +54,8 @@ int main() {
 
 
     if (NtHeader->Signature == IMAGE_NT_SIGNATURE) {
+        ZeroMemory(&PI, sizeof(PI));
+        ZeroMemory(&SI, sizeof(SI));
 
         GetModuleFileNameA(NULL, currentFilePath, MAX_PATH);
         // create new process for injection
