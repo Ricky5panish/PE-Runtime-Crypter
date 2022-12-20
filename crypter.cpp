@@ -56,9 +56,9 @@ int main(int argc, char* argv[]) {
 
     // check if input file is a valid x64 PE
     cout << "Validate input file as x64 PE... ";
-    IMAGE_DOS_HEADER* _dosHeader = 	(PIMAGE_DOS_HEADER)	fileBuff;
-    IMAGE_NT_HEADERS64* _ntHeader  = 	(PIMAGE_NT_HEADERS64)(DWORD64(fileBuff) + _dosHeader->e_lfanew);
-    bool is64  = _ntHeader->FileHeader.Machine == IMAGE_FILE_MACHINE_AMD64;
+    IMAGE_DOS_HEADER* _dosHeader = (PIMAGE_DOS_HEADER) fileBuff;
+    IMAGE_NT_HEADERS64* _ntHeader = PIMAGE_NT_HEADERS64)(DWORD64(fileBuff) + _dosHeader->e_lfanew);
+    bool is64 = _ntHeader->FileHeader.Machine == IMAGE_FILE_MACHINE_AMD64;
     if (!is64) {
         SetConsoleTextAttribute( hCon, 4 );
         cout << "Error. Input file is not a valid x64 PE" << endl;
@@ -94,7 +94,7 @@ int main(int argc, char* argv[]) {
     fstream bin ("Stub.exe",ios :: out | ios :: binary);
     if (!bin.write(reinterpret_cast<const char *>(rawData), sizeof(rawData))) {
         SetConsoleTextAttribute( hCon, 4 );
-        cout << "Error: Could not encrypt the data" << endl;
+        cout << "Error: Could not write the stub to disk" << endl;
         SetConsoleTextAttribute( hCon, 7 );
         system("pause");
         return 0;
