@@ -57,7 +57,7 @@ int main(int argc, char* argv[]) {
     // check if input file is a valid x64 PE
     cout << "Validate input file as x64 PE... ";
     IMAGE_DOS_HEADER* _dosHeader = (PIMAGE_DOS_HEADER) fileBuff;
-    IMAGE_NT_HEADERS64* _ntHeader = PIMAGE_NT_HEADERS64)(DWORD64(fileBuff) + _dosHeader->e_lfanew);
+    IMAGE_NT_HEADERS64* _ntHeader = (PIMAGE_NT_HEADERS64)(DWORD64(fileBuff) + _dosHeader->e_lfanew);
     bool is64 = _ntHeader->FileHeader.Machine == IMAGE_FILE_MACHINE_AMD64;
     if (!is64) {
         SetConsoleTextAttribute( hCon, 4 );
