@@ -1,12 +1,12 @@
 # PoC PE-Runtime-Crypter
 A x64 runtime Crypter written in C++ to bypass AVs signature based detection.
 
-## How to build:
+## How to build
 - build stub.cpp
 - insert raw Data of the stub in crypter.cpp
 - build crypter.cpp
 
-## How to use:
+## How to use
 
 Either via command line argument
 ```cmd
