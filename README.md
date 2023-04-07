@@ -1,5 +1,5 @@
 # PoC PE-Runtime-Crypter
-A x64 runtime Crypter written in C++ to bypass AVs signature based detection.
+A runtime Crypter written in C++ for native x64 PE files to bypass AVs signature based detection.
 
 ## How to build
 - build stub.cpp
