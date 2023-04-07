@@ -3,7 +3,7 @@ A runtime Crypter written in C++ for native x64 PE files to bypass AVs signature
 
 ## How to build
 - build stub.cpp
-- insert raw Data of the stub in crypter.cpp
+- insert raw Data of the stub in crypter.cpp (I used HxD to export a C/C++ bytearray)
 - build crypter.cpp
 
 ## How to use
